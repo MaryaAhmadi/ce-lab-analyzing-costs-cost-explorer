@@ -1,49 +1,97 @@
 # Lab M7.01 - Analyzing Costs with AWS Cost Explorer
 
-**Repository:** [https://github.com/cloud-engineering-bootcamp/ce-lab-analyzing-costs-cost-explorer](https://github.com/cloud-engineering-bootcamp/ce-lab-analyzing-costs-cost-explorer)
+**Repository:** https://github.com/MaryaAhmadi/ce-lab-analyzing-costs-cost-explorer.git
 
 **Activity Type:** Individual  
 **Estimated Time:** 45-60 minutes
 
-## Learning Objectives
+## Overview
+In this lab, I explored AWS Cost Explorer to analyze cloud spending, identify cost drivers, and generate insights for financial decision-making. The goal was to simulate a FinOps scenario and provide answers to key business questions about cost trends and optimization opportunities.
 
-- [ ] Navigate AWS Cost Explorer interface
-- [ ] Create custom cost reports with filtering and grouping
-- [ ] Analyze spending trends and patterns
-- [ ] Save and share cost reports
-- [ ] Generate cost forecasts
+## What I Did
+Navigated AWS Cost Explorer interface
+Created custom reports grouped by service and instance type
+Analyzed monthly and daily cost trends
+Attempted tag-based cost allocation
+Investigated data transfer costs
+Attempted to generate cost forecast
+Saved reusable reports for future analysis
 
-## Prerequisites
+## Key Findings
+💰 Top 3 Services by Cost
+EC2-Instances → $36.29
+VPC → $14.75
+Tax → $12.64
 
-- [ ] AWS account with Cost Explorer enabled
-- [ ] At least 2-3 months of AWS usage (or access to sample data)
-- [ ] Completed Module 7 Lesson 1 and 2
+## 📈 Cost Trend
+All AWS usage started in March 2026
+No spending in previous months → indicates new environment
+Significant cost spike observed in March
 
-## Introduction
+## 🖥️ EC2 Usage Insights
+Most expensive instance types:
+t3.medium ($13.95)
+t2.micro ($13.89)
+No clear weekend usage pattern
+Sudden increase in EC2 usage after March 20
 
-AWS Cost Explorer is your primary tool for understanding where money is being spent. In this lab, you'll explore your AWS costs, identify the biggest spenders, and create reports for different stakeholders.
+## 🌐 Data Transfer
+No data transfer costs observed ($0.00)
+Indicates minimal external traffic or networking usage
 
-## Scenario
+## 🏷️ Tag-Based Allocation
+Tags are configured on resources
+However, data is not yet visible in Cost Explorer
+AWS requires up to 24 hours after activation
 
-You're the FinOps engineer for a growing startup. The CFO asks: "Which services cost the most?" and "Are we trending over budget?" You'll use Cost Explorer to answer these questions.
+## 🔮 Cost Forecast
+Forecast not available
+Reason: insufficient historical data (only one month of usage)
 
-## Your Task
+## Saved Reports
+The following reports were created and saved for reuse:
+Monthly Spend by Service
+Daily EC2 Costs
+These reports can be used for ongoing monitoring and stakeholder reporting.
 
-**What you'll create:**
-- Multiple custom cost reports
-- Service-level cost breakdown
-- Tag-based cost allocation view
-- Cost forecast for next month
-- Saved reports for weekly reviews
+## Optimization Opportunities
+Review EC2 usage and stop unused instances
+Consider smaller instance types to reduce compute cost
+Implement scheduling (turn off instances when not needed)
+Improve tagging strategy for better cost visibility
+Monitor future data transfer as system scales
 
-**Success criteria:**
-- [ ] Identified top 3 spending services
-- [ ] Created report grouped by tags
-- [ ] Generated accurate forecast
-- [ ] Saved at least 2 custom reports
-- [ ] Documented findings in GitHub repo
+## Screenshots
+forecast-screenshot.png
+service-breakdown-screenshot.png
 
-**Time limit:** 45-60 minutes
+## Learning Reflection
+
+1. Biggest cost surprise
+The most surprising insight was that EC2 instances quickly became the main cost driver even with relatively small usage.
+
+2. Most useful report
+The Daily EC2 Cost report is the most useful because it reveals usage patterns and spikes clearly.
+
+3. Explaining forecast to stakeholders
+Since there is not enough historical data, I would explain that forecasting is currently unreliable and will improve over time as more usage data is collected.
+
+4. Optimization opportunities identified
+Reducing EC2 usage
+Rightsizing instances
+Scheduling workloads
+Improving cost visibility through tagging
+
+## Conclusion
+This lab demonstrated how AWS Cost Explorer can be used to analyze spending, identify cost drivers, and support financial decision-making. Even with limited data, valuable insights can be extracted to guide optimization strategies.
+
+## Repository Structure
+cost-analysis.md → Detailed analysis
+forecast-screenshot.png → Forecast attempt
+service-breakdown-screenshot.png → Cost by service
+README.md → Summary and explanation
+
+
 
 ## Step-by-Step Instructions
 
@@ -178,27 +226,6 @@ In your `cost-analysis.md`, create an executive summary:
 - See service-breakdown-screenshot.png
 ```
 
-## Submission
-
-Submit to GitHub repository with:
-1. `cost-analysis.md` - Your analysis and findings
-2. `forecast-screenshot.png` - Cost forecast screenshot
-3. `service-breakdown-screenshot.png` - Top services screenshot
-4. `README.md` - Description of your analysis process
-
-## Verification Checklist
-
-- [ ] Accessed Cost Explorer successfully
-- [ ] Created report showing monthly spend by service
-- [ ] Identified top 3 spending services
-- [ ] Created daily EC2 cost view
-- [ ] Attempted tag-based allocation (if tags available)
-- [ ] Generated 3-month forecast
-- [ ] Analyzed data transfer costs
-- [ ] Saved at least 2 custom reports
-- [ ] Created executive summary with findings
-- [ ] Screenshots captured and saved
-- [ ] All files committed to GitHub
 
 ## Troubleshooting
 
@@ -221,37 +248,30 @@ Submit to GitHub repository with:
 - New services or major changes reduce accuracy
 - Compare to business growth plans
 
-## Bonus Challenges
+## Submission Status
 
-**Bonus 1: Rightsizing Analysis**
-Access Cost Explorer → Recommendations → Rightsizing
-- Review recommendations
-- Document top 3 opportunities
-- Calculate total potential savings
+✅Cost Explorer accessed
 
-**Bonus 2: Reserved Instance Recommendations**
-Cost Explorer → Recommendations → Reserved Instances
-- Review RI purchase recommendations
-- Document potential savings
-- Calculate break-even point
+✅Monthly service report created
 
-**Bonus 3: Cost Anomaly Investigation**
-If you have Cost Anomaly Detection enabled:
-- Review recent anomalies
-- Investigate root cause
-- Document findings
+✅Top 3 services identified
 
-## Learning Reflection
+✅Daily EC2 analysis completed
+✅
+Tag-based allocation attempted
 
-After completing this lab, answer:
-1. What was your biggest cost surprise?
-2. Which report would be most useful for your team?
-3. How would you explain the forecast to non-technical stakeholders?
-4. What optimization opportunities did you identify?
+✅Forecast attempted (not available due to data limits)
+
+✅Data transfer analyzed
+
+✅Reports saved
+
+✅Documentation completed
+
+
 
 ## Additional Resources
 
 - [AWS Cost Explorer User Guide](https://docs.aws.amazon.com/cost-management/latest/userguide/ce-what-is.html)
 - [AWS Cost Management Blog](https://aws.amazon.com/blogs/aws-cost-management/)
 
-**Good luck! 🚀**
