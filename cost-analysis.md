@@ -1,48 +1,7 @@
-# AWS Cost Analysis
+## Step 2 - Monthly Spend by Service
 
-## Executive Summary
-
-- Total Spend (Last Month): TBD
-- Change vs Previous Month: TBD
-- Top 3 Services: TBD
-- Forecast Next Month: TBD
-
----
-
-## Monthly Spend by Service
-
-Top services by cost:
-1. TBD
-2. TBD
-3. TBD
-
-Observations:
-- TBD
-
----
-
-## EC2 Daily Cost Analysis
-
-Instance types with highest cost:
-- TBD
-
-Patterns:
-- TBD
-
----
-
-## Data Transfer Costs
-
-Services with highest data transfer:
-- TBD
-
-Observations:
-- TBD
-
----
-
-## Cost Forecast
-
-Forecast next month: TBD
-
-Confidence range: TBD
+- Top 3 services: EC2-Instances ($36.29), VPC ($14.75), Tax ($12.64)
+- Highest growth service: EC2 (sudden increase in March)
+- Observations:
+  - Significant spike in March 2026
+  - No costs in previous months → indicates recent usage start
